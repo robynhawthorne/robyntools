@@ -1,7 +1,12 @@
-library(robyntools)
+library(testthat)
+
+context("Compute Squares: .compute_square")
+
+#library(robyntools)
 
 test_that("negative numbers compute", {
-  expect_equal((-3), 9)
+  square <- compute_square(-3)
+  expect_equal(square, 9)
 })
 
 

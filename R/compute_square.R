@@ -10,11 +10,16 @@
 
 compute_square <- function(x){
   
-  if(class(x) != numeric){
-    stop("X must be numeric")
+  if(class(x) != "numeric"){
+    stop("x must be numeric")
+  }
+  
+  if(class(x) == "logical"){
+    stop("x must be numeric")
   }
   
   square <- x*x
   return(square)
 }
 
+compute_square(2)
